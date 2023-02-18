@@ -6,16 +6,12 @@ Ce projet lit un poème aléatoire à voix haute lorsque le capteur de mouvement
 
 - Raspberry Pi (ou similaire) avec un système d'exploitation compatible
 - Capteur de mouvement HC-SR501
-- Bibliothèque RPi.GPIO
-- Bibliothèque Pyttsx3
 
 ## Installation
 
 1. Connectez le capteur de mouvement HC-SR501 à votre Raspberry Pi. Assurez-vous que les broches sont correctement connectées selon le schéma de câblage.
-2. Installez la bibliothèque RPi.GPIO à l'aide de la commande suivante : `sudo apt-get install python-rpi.gpio`
+2. Installez la bibliothèque RPi.GPIO à l'aide de la commande suivante : `sudo apt-get install rpi.gpio`
 3. Installez la bibliothèque Pyttsx3 à l'aide de la commande suivante : `pip install pyttsx3`
-4. Téléchargez ou créez un dossier contenant des fichiers de poèmes au format texte (`.txt`). Assurez-vous que les fichiers sont bien formatés avec une ligne vide entre chaque strophe.
-5. Mettez à jour le chemin d'accès du dossier de poèmes dans le fichier `main.py`.
 
 ## Utilisation
 
