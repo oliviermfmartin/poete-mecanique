@@ -22,15 +22,18 @@ engine.setProperty('voice', voice.id)
 # Sélectionner une langue pour la voix, par exemple 'fr' pour le français
 engine.setProperty('language', 'fr')
 
+# Liste des poèmes
+poem_files = os.listdir(poem_folder)
+
 # Boucle indéfiniment
 while True:
     # Attendre la détection de mouvement
     while GPIO.input(14) == 0:
         time.sleep(0.1)
+    
     # Mouvement détecté, sélectionner un fichier de poème aléatoire et le lire
-    print("Mouvement détecté, lecture du poème...")
-    poem_files = os.listdir(poem_folder)
     poem_file = os.path.join(poem_folder, random.choice(poem_files))
+    print(f'Mouvement détecté, lecture du poème: {poem_file}')
     with open(poem_file, 'r') as f:
         poem_text = f.read().replace('\n', ' ')
     engine.say(poem_text)
