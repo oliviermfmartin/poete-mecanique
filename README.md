@@ -6,6 +6,7 @@ Ce projet lit un poème aléatoire à voix haute lorsque le capteur de mouvement
 
 - Raspberry Pi (ou similaire) avec un système d'exploitation compatible
 - Capteur de mouvement HC-SR501
+- Haut-parleur
 
 ## Installation
 
