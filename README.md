@@ -1,6 +1,6 @@
 # Le Poète Mécanique
 
-Ce projet lit un poème aléatoire à voix haute lorsque le capteur de mouvement HC-SR501 détecte un mouvement. La voix synthétique utilisée pour lire le poème peut être configurée pour une voix et une langue spécifiques en utilisant la bibliothèque Pyttsx3.
+Ce projet lit un poème aléatoire à voix haute lorsque le capteur de mouvement HC-SR501 détecte un mouvement. La voix synthétique utilisée pour lire le poème est fournie par la bibliothèque gTTS, qui utilise l'API de synthèse vocale de Google pour générer de la parole à partir de texte.
 
 ## Prérequis
 
@@ -11,7 +11,7 @@ Ce projet lit un poème aléatoire à voix haute lorsque le capteur de mouvement
 
 1. Connectez le capteur de mouvement HC-SR501 à votre Raspberry Pi. Assurez-vous que les broches sont correctement connectées selon le schéma de câblage.
 2. Installez la bibliothèque RPi.GPIO à l'aide de la commande suivante : `sudo apt-get install rpi.gpio`
-3. Installez la bibliothèque Pyttsx3 à l'aide de la commande suivante : `pip install pyttsx3`
+3. Installez la bibliothèque gTTS et la bibliothèque playsound à l'aide de la commande suivante : `pip install gtts playsound`
 
 ## Utilisation
 
@@ -21,7 +21,7 @@ Ce projet lit un poème aléatoire à voix haute lorsque le capteur de mouvement
 
 ## Configuration
 
-La voix synthétique utilisée pour lire le poème peut être configurée en modifiant les propriétés de la voix et de la langue dans le fichier `main.py`. Vous pouvez sélectionner une voix différente en choisissant un élément différent de la liste `voices`, et vous pouvez sélectionner une langue différente en définissant la propriété `language` sur un code de langue ISO 639-1 différent.
+La voix synthétique utilisée pour lire le poème peut être configurée en définissant la propriété `language` sur un code de langue ISO 639-1 différent dans le fichier `main.py`. Le code 'fr' est utilisé par défaut pour le français.
 
 ## Contribuer
 
