@@ -27,7 +27,7 @@ if not os.path.exists(audio_folder):
 while True:
     # Attendre la détection de mouvement
     while GPIO.input(4) == 0:
-        time.sleep(0.1)
+        time.sleep(0.5)
     
     # Mouvement détecté, sélectionner un fichier de poème aléatoire et le lire
     poem_file = os.path.join(poem_folder, random.choice(poem_files))
