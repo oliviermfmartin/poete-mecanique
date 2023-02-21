@@ -39,7 +39,7 @@ while True:
     else:
         print(f'Conversion du texte en audio pour le poème: {poem_file}')
         with open(poem_file, 'r') as f:
-            poem_text = f.read().replace('\n', '')
+            poem_text = f.read().replace('\n', ' ')
 
         tts = gTTS(text=poem_text, lang=language)
         tts.save(audio_file)
